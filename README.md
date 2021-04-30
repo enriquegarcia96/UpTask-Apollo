@@ -1,7 +1,8 @@
 # UpTask Apollo
 Administrador de Proyectos 📱 ⚛ con GraphQL 
 
-
+# Diseño de la APP
+### `npm install native-base`
 
 ## Instalar react-navigation/native
 ### `npm install @react-navigation/native`

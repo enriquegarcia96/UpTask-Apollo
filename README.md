@@ -26,3 +26,6 @@ import 'react-native-gesture-handler';
 
 # Async Storage
 ### `npm i @react-native-community/async-storage`
+
+# para leer el token en toda la aplicacion
+### `npm i apollo-link-context`

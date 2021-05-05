@@ -24,3 +24,5 @@ implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
 ## en el App.js 
 import 'react-native-gesture-handler';
 
+# Async Storage
+### `npm i @react-native-community/async-storage`

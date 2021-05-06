@@ -29,3 +29,7 @@ import 'react-native-gesture-handler';
 
 # para leer el token en toda la aplicacion
 ### `npm i apollo-link-context`
+
+
+# Iconos 
+### `npm i react-native-vector-icons`

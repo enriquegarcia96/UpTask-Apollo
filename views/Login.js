@@ -93,9 +93,10 @@ const Login = () => {
 
 
     return (
-        <Container style={[{ backgroundColor: '#E84347'}, globalStyles.contenedor ] }>
+        <Container style={[{ backgroundColor: '#f21170'}, globalStyles.contenedor ] }>
             <View style={ globalStyles.contenido }>
                 <H1 style={ globalStyles.titulo } >Uptask</H1>
+                <H1 style={ globalStyles.firma } >Enrique S. García</H1>
 
                 <Form>
                     <Item inlineLabel last style={ globalStyles.input } >

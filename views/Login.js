@@ -7,6 +7,8 @@ import { useNavigation } from '@react-navigation/native';
 
 import globalStyles from '../styles/global';
 
+import AsyncStorage from '@react-native-community/async-storage';
+
 
 //Apollo
 import { gql, useMutation } from '@apollo/client';
@@ -66,6 +68,12 @@ const Login = () => {
             const { token } = data.autenticarUsuario;
 
             //.- colocar el token en el storage .-//
+            await AsyncStorage.setItem('token', token);
+
+
+            //.- Redirrecionar a Proyectos .-//
+            navigation.navigate('Proyectos');
+            
 
         } catch (error) {
             guardarMensajes(error.message.replace('GraphQL error:', ''));
@@ -85,16 +93,19 @@ const Login = () => {
 
 
     return (
-        <Container style={[{ backgroundColor: '#E84347'}, globalStyles.contenedor ] }>
+        <Container style={[{ backgroundColor: '#f21170'}, globalStyles.contenedor ] }>
             <View style={ globalStyles.contenido }>
                 <H1 style={ globalStyles.titulo } >Uptask</H1>
+                <H1 style={ globalStyles.firma } >Enrique S. García</H1>
 
                 <Form>
                     <Item inlineLabel last style={ globalStyles.input } >
                         <Input 
                             placeholder='Email'
                             keyboardType='email-address'
-                            onChangeText={ texto => guardarEmail(texto) }
+                            onChangeText={ texto => guardarEmail(texto.toLowerCase()) }
+                            value={email}
+                            
                         />
                     </Item>
 

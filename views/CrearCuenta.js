@@ -99,7 +99,7 @@ const CrearCuenta = () => {
 
 
     return (
-        <Container style={[{ backgroundColor: '#E84347'}, globalStyles.contenedor ] }>
+        <Container style={[{ backgroundColor: '#f21170'}, globalStyles.contenedor ] }>
             <View style={ globalStyles.contenido }>
                 <H1 style={ globalStyles.titulo } >Uptask</H1>
 

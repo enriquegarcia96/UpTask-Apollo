@@ -3,13 +3,15 @@ import React from 'react';
 
 import { Root } from 'native-base';
 
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack';
 
-
 import CrearCuenta from './views/CrearCuenta';
+import Proyectos from './views/Proyectos';
 import Login from './views/Login';
+import NuevoProyecto from './views/NuevoProyecto';
+import Proyecto from './views/Proyecto';
 
 
 const Stack = createStackNavigator();
@@ -47,6 +49,55 @@ const App =()  => {
                 }
               }}
             />
+
+            <Stack.Screen 
+              name='Proyectos'
+              component={Proyectos}
+              options={{
+                title: 'Proyectos',
+                headerStyle:{
+                  backgroundColor: '#28303B'
+                },
+                headerTintColor: '#FFF',
+                headerTitleStyle: {
+                  fontWeight: 'bold'
+                }
+              }}
+            />
+
+            <Stack.Screen 
+              name='NuevoProyecto'
+              component={NuevoProyecto}
+              options={{
+                title: 'Nuevo Proyecto',
+                headerStyle:{
+                  backgroundColor: '#28303B'
+                },
+                headerTintColor: '#FFF',
+                headerTitleStyle: {
+                  fontWeight: 'bold'
+                }
+              }}
+            />
+
+            <Stack.Screen 
+              name='Proyecto'
+              component={Proyecto}
+              options={ ({ route }) => ( {
+
+                //titulos dinamicos que viene de la base de datos
+                title: route.params.nombre,//para que aparezca el titulo con el nombre del proyecto
+                headerStyle:{
+                  backgroundColor: '#28303B'
+                },
+                headerTintColor: '#FFF',
+                headerTitleStyle: {
+                  fontWeight: 'bold'
+                }
+              })}
+            />
+
+
 
 
           </Stack.Navigator>
